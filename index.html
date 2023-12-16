@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex justify-center items-center h-screen bg-neutral-400">
+    <section class="max-w-lg h-fix w-full bg-neutral-50 rounded-2xl px-5 py-5">
+        <div class="container">
+            <header class="pb-2">
+                <h1 class="font-bold text-2xl text-center pb-5">Tip Calculator</h1>
+                <p>Enter the bill amount and tip percentage to calculate the total.</p>
+            </header>
+            <div>
+                <label for="billAmount">Bill amount:</label> <br>
+                <input class="border-2 w-full mb-2" type="number" id="billAmount" required> <br>
+                <label for="tipPercentage">Tip Percentage:</label> <br>
+                <input class="border-2 w-full mb-5" type="number" id="tipPercentage" onkeydown="checkForEnter(event)" required> <br>
+                <button id="button" class="w-full bg-lime-500 rounded text-white h-8 mb-3">Calculate</button>
+                <div class="flex">
+                    <p>Total:</p>
+                    <p class="font-bold" id="total"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
